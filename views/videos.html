@@ -1,0 +1,32 @@
+<div ng-app="myApp" ng-controller="videosController">
+  <div class="d-flex justify-content-center my-3 py-3">
+    <h2 id="former-champions" class="display-5">DECADES IN REVIEW</h2>
+  </div>
+
+  <hr id="line">
+  <div class="input mb-2">
+    <input type="text" ng-model="user.message" placeholder="Search video">
+    <br><span>{{ user.message }}</span><br>
+    
+  </div>
+
+  <div id="recap" class="container-fluid border fight-images d-flex py-4 d-flex justify-content-center" ng-repeat="item in videoImages">
+    <div class="">
+        <div class="col-12 my-3 ">
+            <div class="card">
+                <div class="card-horizontal d-flex align-items-center">
+                    <div class="img-square-wrapper">
+                      <a href="#">
+                        <img src="{{ item.image }}" width="275" height="175">
+                    </div>
+                      </a>
+                    <div class="card-body bg-white mt-3">
+                        <h3 class="card-title2">{{ item.title }}</h4>
+                        <p class="card-text2" style="width: 300px;">{{ item.text }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
